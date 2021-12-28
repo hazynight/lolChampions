@@ -18,7 +18,7 @@ export default {
     },
     computed: {
         spellURL() {
-            return 'http://ddragon.leagueoflegends.com/cdn/11.24.1/img/spell/'
+            return 'https://ddragon.leagueoflegends.com/cdn/11.24.1/img/spell/'
                     + this.spell.image
         }
     }

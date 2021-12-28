@@ -54,7 +54,7 @@ export default {
             return this.$store.state.catchedChampions.filter( c => c.id === this.id)[0]
         },
         loaddingImgURL() {
-            return 'http://ddragon.leagueoflegends.com/cdn/img/champion/loading/'
+            return 'https://ddragon.leagueoflegends.com/cdn/img/champion/loading/'
                     + this.id 
                     + '_0.jpg'
         },

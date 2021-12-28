@@ -15,7 +15,7 @@ export default {
     },
     computed: {
         passiveURL() {
-            return 'http://ddragon.leagueoflegends.com/cdn/11.24.1/img/passive/'
+            return 'https://ddragon.leagueoflegends.com/cdn/11.24.1/img/passive/'
                     + this.passive.image
         }
     }

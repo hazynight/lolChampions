@@ -17,7 +17,7 @@ export default {
     },
     computed: {
         imageURL() {
-            return 'http://ddragon.leagueoflegends.com/cdn/11.24.1/img/champion/'
+            return 'https://ddragon.leagueoflegends.com/cdn/11.24.1/img/champion/'
                 +   this.id 
                 + '.png'
         },
