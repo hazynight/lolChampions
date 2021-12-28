@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const apiClient = axios.create({
-    baseURL: 'http://ddragon.leagueoflegends.com/cdn/11.24.1'
+    baseURL: 'https://ddragon.leagueoflegends.com/cdn/11.24.1'
 })
 
 export default {
