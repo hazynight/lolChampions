@@ -18,8 +18,8 @@ export default {
   },
   created() {
     this.$store.dispatch('fetchChampions')
-      .catch(error => {
-        console.log(error)
+      .catch(() => {
+        this.$router.push({ name: 'NetworkError'})
       })
   },
   computed: mapState([ 'champions' ])

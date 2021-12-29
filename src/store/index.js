@@ -60,6 +60,9 @@ export default createStore({
           .then(response => {
             commit('ADD_CATCHEDCHAMPIONS', response.data.data[id])
           })
+          .catch( error => {
+            throw(error)
+          })
       }
     }
   },

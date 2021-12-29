@@ -1,9 +1,9 @@
 <template>
-    <div class='detailsContainer'>
+    <div v-if='details' class='detailsContainer'>
         <img :src='loaddingImgURL'/>
         <div class='rightSide'>
             <div> Name:   {{ name }} </div> <br/>
-            <div> Title:   {{ details.title }} </div> <br/>
+            <div> Title:  {{ details.title }} </div> <br/>
             <div> Tags:   {{ details.tags.join(', ') }} </div> <br/>
             <div> Background:   {{ details.background }} </div> <br/>
             <div> Stats: 
@@ -48,6 +48,15 @@ export default {
     },
     created() {
         this.$store.dispatch('fetchChampionDetail', this.id)
+            .catch( (error) => {
+                console.log(error)
+                if (error.response && error.response.status == 403) {
+                    this.$router.push( {name: '404Resource', params: { resource: 'Champion ' + this.id}})
+                }
+                else {
+                    this.$router.push( {name: 'NetworkError'} )
+                }
+            })
     },
     computed: {
         details() {
